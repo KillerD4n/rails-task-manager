@@ -1,0 +1,15 @@
+<h1><%= @task.title %></h1>
+
+<div class="task">
+  <h2><%= @task.details %></h2>
+</div>
+<div class="completed">
+  <h3><%= @task.completed == true ? 'This task has been completed' : 'This task has not been completed'%></h3>
+</div>
+<div>
+  <ul>
+    <li><%= link_to 'Edit This Task', edit_path(@task) %></li>
+    <li><%= link_to 'Delete This Task', destroy_path(@task), method: :delete %></li>
+    <li><%= link_to 'Back to your task list', tasks_path %></li>
+
+</div>
